@@ -2,6 +2,14 @@ class ProcessValues {
 	public static void main(String[] args) {
 		String[] names = {"a", "b", "d"};
 		processValues(names, new SimpleLookup());
+		
+		ComplexLookup complexLookup = new ComplexLookup();
+		complexLookup.add("a", "aa");
+		complexLookup.add("b", "bb");
+		complexLookup.add("c", "cc");
+		complexLookup.remove("c");
+		complexLookup.add("d", "dd");
+		processValues(names, complexLookup);
 	}
 
 	static void processValues(String[] names, Lookup table) {
