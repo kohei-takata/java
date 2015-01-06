@@ -1,0 +1,1 @@
+class BadDataSetException extends Exception {}
