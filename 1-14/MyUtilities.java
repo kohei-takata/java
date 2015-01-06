@@ -10,7 +10,7 @@ class MyUtilities {
 			in = new FileInputStream(file);
 			return readDataSet(in);
 		} catch (IOException e) {
-			throw new BadDataSetException();
+			throw new BadDataSetException(setName, e);
 		} finally {
 			try {
 				if (in != null) {
