@@ -22,7 +22,7 @@ class Vehicle {
 		vehicle1.nameOfOwner = "ore";
 		vehicle1.number = "01";
 		System.out.println(max());
-		System.out.println(vehicle1.speed + "," + vehicle1.houkou + "," + vehicle1.nameOfOwner + "," + vehicle1.nextID + "," + vehicle1.number);
+		System.out.println(vehicle1.toString());
 	
 	
 		Vehicle vehicle2 = new Vehicle("aitsu");
@@ -30,11 +30,16 @@ class Vehicle {
 		vehicle2.houkou = "up";
 		vehicle2.number = "02";
 		System.out.println(max());
-		System.out.println(vehicle2.speed + "," + vehicle2.houkou + "," + vehicle2.nameOfOwner + "," + vehicle2.nextID + "," + vehicle2.number);
+		System.out.println(vehicle2.toString());
 	
 	}
 
 	public static long max() {
 		return nextID;
+	}
+
+	public String toString() {
+		String printWords = this.speed + "," + this.houkou + "," + this.nameOfOwner + "," + this.nextID + "," + this.number;
+		return printWords;
 	}
 }
